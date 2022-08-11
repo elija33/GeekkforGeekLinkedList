@@ -1,54 +1,65 @@
 package RemoveDuplicatesFromSortedList;
 
 public class RemoveDuplicates {
-    public static class Node{
-        int date;
-        Node next;
+    Node head;
+	class Node {
+		int data;
+		Node next;
+		Node(int d)
+		{
+			data = d;
+			next = null;
+		}
+	}
 
-        public Node(int k){
-            date = k;
-            next = null;
-        }
-    }
-    public static void main(String[] args) {
-        Node head = new Node(10);
-        Node second = new Node(10);
-        Node thirthNode = new Node(10);
-        Node four = new Node(15);
-        Node five = new Node(17);
-        Node six = new Node(16);
-        Node seve = new Node(20);
-        Node eight = new Node(15);
-        Node nine = new Node(16);
-        Node ten = new Node(16);
-        Node eleven = new Node(19);
+	void removeDuplicates()
+	{
+		Node temp = head, prev = head;
+		while (temp != null) {
 
-        head.next = second;
-        second.next = thirthNode;
-        thirthNode.next = four;
-        four.next = five;
-        five.next = six;
-        six.next = seve;
-        seve.next = eight;
-        eight.next = nine;
-        nine.next = ten;
-        ten.next = eleven;
+			if (temp.data != prev.data) {
+				prev.next = temp;
+				prev = temp;
+			}
+			temp = temp.next;
+		}
+		if (prev != temp)
+			prev.next = null;
+	}
+	public void push(int new_data)
+	{
+		Node new_node = new Node(new_data);
+		new_node.next = head;
+		head = new_node;
+	}
+	void printList()
+	{
+		Node temp = head;
+		while (temp != null) {
+			System.out.print(temp.data + " ");
+			temp = temp.next;
+		}
+		System.out.println();
+	}
 
-        System.out.println(head.date+"->" + second.date+"->" + thirthNode.date+"->" + four.date+"->" 
-                + five.date+"->" + six.date+"->"+ seve.date+"->" + eight.date+"->" 
-                + nine.date+"->" + ten.date+"->" + eleven.date);
+	public static void main(String args[])
+	{
+		RemoveDuplicates llist = new RemoveDuplicates();
+		llist.push(20);
+		llist.push(13);
+		llist.push(13);
+		llist.push(11);
+		llist.push(11);
+		llist.push(11);
 
-}
+		System.out.print("List before ");
+		System.out.println("removal of duplicates");
+		llist.printList();
 
-        public static void remove(Node head){
-            Node curr = head;
-            while(curr != null && curr.next != null){
-                if(curr.date == curr.next.date){
-                    curr.next = curr.next.next;
-            }
-            else{
-                curr = curr.next;
-            }
-        }
-    }
+		llist.removeDuplicates();
+
+		System.out.println(
+			"List after removal of elements");
+		llist.printList();
+	}
 }
