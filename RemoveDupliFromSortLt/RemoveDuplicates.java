@@ -1,4 +1,4 @@
-package RemoveDuplicatesFromSortedList;
+package RemoveDupliFromSortLt;
 
 public class RemoveDuplicates {
     Node head;

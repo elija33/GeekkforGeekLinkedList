@@ -6,13 +6,13 @@ public class LinkedListImplem{
     public static class Node{
 
 // vaulabe called data that hold data for linkedlist
-        int data;
+        public int data;
 
 // vaulabe called next that hold connebt the node together in linkedlist
-        Node next;
+        public Node next;
 
 // cretea constructor that hold vaule of k 
-        Node(int k) {
+        public Node(int k) {
 
     // set the k to data
             data = k;

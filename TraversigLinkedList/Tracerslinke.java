@@ -18,9 +18,7 @@ public class Tracerslinke {
         Node four = new Node(2);
 
         head.next = second;
-
         second.next = thirt;
-
         thirt.next = four;
 
         System.out.println(head.data+"->" + second.data+"->" + thirt.data+"->" + four.data);
