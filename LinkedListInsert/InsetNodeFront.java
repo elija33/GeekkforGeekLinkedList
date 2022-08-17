@@ -1,6 +1,6 @@
-package LinkedList;
+package LinkedListInsert;
 
-public class InsetsFrontNode {
+public class InsetNodeFront {
     Node head;
 
     public static class Node{

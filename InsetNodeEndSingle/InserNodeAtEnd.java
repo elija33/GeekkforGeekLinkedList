@@ -1,6 +1,6 @@
-package InsetElementEndSingle;
+package InsetNodeEndSingle;
 
-public class InserEndElement {
+public class InserNodeAtEnd {
 
     public static class Node{
         int data;
