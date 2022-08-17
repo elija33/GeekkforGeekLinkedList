@@ -21,8 +21,17 @@ public class InsetGivenNode {
         Node five = new Node(20);
         Node six = new Node(22);
 
-        System.out.println(head+"->" + first+"->" + second+"->" + thrid+"->" + 
-                    four+"->" + five+"->" + six);
+        head.next = first;
+        first.next = second;
+        second.next = thrid;
+        thrid.next = four;
+        four.next = five;
+        five.next = six;
+
+        System.out.println(head.data+"->" + first.data+"->" + second.data+"->" + thrid.data+"->" + 
+                    four.data+"->" + five.data+"->" + six.data);
     }
+
+    public void in
     
 }
