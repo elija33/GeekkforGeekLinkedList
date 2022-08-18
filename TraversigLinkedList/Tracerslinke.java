@@ -30,7 +30,7 @@ public class Tracerslinke {
     public static void printlist(Node head){
         Node curr = head;
         while(curr != null){
-            System.out.println(curr.data+ " ");
+            System.out.print(curr.data+ " ");
             curr = curr.next;
         }
     }
