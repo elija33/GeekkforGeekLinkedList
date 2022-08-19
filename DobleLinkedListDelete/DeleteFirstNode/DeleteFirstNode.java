@@ -29,21 +29,20 @@ public class DeleteFirstNode {
         head = dfirts(head);
         printlist(head);
 
-        System.err.println(head.data+"->" + first.data+"->" + second.data+"->" + third.data);
+        System.out.println(head.data+"->" + first.data+"->" + second.data+"->" + third.data);
         System.out.println(head.data+"<-" + first.data+"<-" + second.data+"<-" + third.data);
         System.out.println();
     }
 
-    private static Node dfirts(Node head) {
-        if(head == null){
+     static Node dfirts(Node head) {
+        if(head == null)
             return null;
-        }
         if(head.next == null){
             return null;
         }
         else{
             head = head.next;
-            head = head.prev;
+            head.prev = null;
         }
         return head;
     }
