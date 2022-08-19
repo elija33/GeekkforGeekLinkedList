@@ -1,4 +1,4 @@
-package DobleLinkedListDelete;
+package DobleLinkedListDelete.DeleteFirstNode;
 
 public class DeleteFirstNode {
 
