@@ -1,5 +1,7 @@
 package DobleLinkelist.InsertElementEndDoblelinke;
 
+import javax.crypto.interfaces.PBEKey;
+
 public class InsertNodeEnd {
 
     public static class Node{
@@ -19,7 +21,8 @@ public class InsertNodeEnd {
         Node second = new Node(25);
         Node third = new Node(25);
         Node four = new Node(30);
-        head = insertNodeAtEnd(head, 40);
+
+        
 
 
         head.next = first;
@@ -30,6 +33,7 @@ public class InsertNodeEnd {
         second.prev = first;
         third.prev = second;
         four.prev = third;
+        printlist(head);
 
         System.out.println(head.data+"->" + first.data+"->" + second.data+"->" + third.data+"->" + four.data);
         System.out.println(head.data+"<-" + first.data+"<-" + second.data+"<-" + third.data+"<-" + four.data);
@@ -46,6 +50,15 @@ public class InsertNodeEnd {
             curr.next = temp;
             temp.prev = curr;
             return curr;
+    }
+
+    public static void printlist(Node head){
+        Node curr = head;
+        while(curr != null){
+            System.out.println(curr.data+ " ");
+            curr = curr.next;
+        }
+        System.out.println();
     }
     
 }
