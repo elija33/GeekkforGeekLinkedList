@@ -30,19 +30,15 @@ public class DeleteNPostion {
         if(head == null || del == null){
             return;
         }
-
         if(head == del){
             head = del.next;
         }
-
         if(del.next != null){
             del.next.prev = del.prev;
         }
-
         if(del.prev != null){
             del.prev.next = del.next;
         }
-
         return;
     }
 
@@ -70,8 +66,7 @@ public class DeleteNPostion {
 		//postion.deleteNode(postion.head.next); /*delete middle node*/
 		//postion.deleteNode(postion.head.next); /*delete last node*/
 
-		System.out.print(
-			"\nModified Linked list ");
+		//System.out.print( "\nModified Linked list ");
 		postion.printlist(postion.head);
     }
 }
