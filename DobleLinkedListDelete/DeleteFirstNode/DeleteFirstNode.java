@@ -30,7 +30,7 @@ public class DeleteFirstNode {
         printlist(head);
     }
 
-     static Node dfirts(Node head) {
+     public static Node dfirts(Node head) {
         if(head == null)
             return null;
         if(head.next == null){
