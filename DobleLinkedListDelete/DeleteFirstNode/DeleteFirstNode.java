@@ -28,10 +28,6 @@ public class DeleteFirstNode {
         third.prev = second;
         head = dfirts(head);
         printlist(head);
-
-        System.out.println(head.data+"->" + first.data+"->" + second.data+"->" + third.data);
-        System.out.println(head.data+"<-" + first.data+"<-" + second.data+"<-" + third.data);
-        System.out.println();
     }
 
      static Node dfirts(Node head) {
