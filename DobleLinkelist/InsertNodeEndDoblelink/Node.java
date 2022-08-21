@@ -1,4 +1,4 @@
-package DobleLinkelist.InsertElementEndDoblelinke;
+package DobleLinkelist.InsertNodeEndDoblelink;
 public class Node {
     int data;
         Node prev;

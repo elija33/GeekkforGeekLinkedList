@@ -1,4 +1,4 @@
-package DobleLinkelist.InsertElementEndDoblelinke;
+package DobleLinkelist.InsertNodeEndDoblelink;
 
 import javax.crypto.interfaces.PBEKey;
 
