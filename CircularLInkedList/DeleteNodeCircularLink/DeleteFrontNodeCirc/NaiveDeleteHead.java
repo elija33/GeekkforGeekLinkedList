@@ -19,8 +19,9 @@ public class NaiveDeleteHead {
         head.next.next.next = new Node(7);
         head.next.next.next.next = new Node(9);
         head.next.next.next.next.next = head;
+        head = deletehead(head); 
         printlist(head);
-        head = deletehead(head);
+        
         System.out.println("This is linked list");
     }
 
