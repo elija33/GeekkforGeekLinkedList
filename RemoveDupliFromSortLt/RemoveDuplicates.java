@@ -1,22 +1,22 @@
 package RemoveDupliFromSortLt;
 
 public class RemoveDuplicates {
-    Node head;
-	class Node {
+	Node head;
+
+	public class Node {
 		int data;
 		Node next;
-		Node(int d)
-		{
+
+		public Node(int d) {
 			data = d;
 			next = null;
 		}
 	}
 
-	void removeDuplicates()
-	{
+	// Removing all the duplicates element
+	public void removeDuplicates() {
 		Node temp = head, prev = head;
 		while (temp != null) {
-
 			if (temp.data != prev.data) {
 				prev.next = temp;
 				prev = temp;
@@ -26,14 +26,16 @@ public class RemoveDuplicates {
 		if (prev != temp)
 			prev.next = null;
 	}
-	public void push(int new_data)
-	{
+
+	// Adding element in the linked list
+	public void push(int new_data) {
 		Node new_node = new Node(new_data);
 		new_node.next = head;
 		head = new_node;
 	}
-	void printList()
-	{
+
+	// Printing out all element in the linked list
+	public void printList() {
 		Node temp = head;
 		while (temp != null) {
 			System.out.print(temp.data + " ");
@@ -42,8 +44,7 @@ public class RemoveDuplicates {
 		System.out.println();
 	}
 
-	public static void main(String args[])
-	{
+	public static void main(String args[]) {
 		RemoveDuplicates llist = new RemoveDuplicates();
 		llist.push(20);
 		llist.push(13);
@@ -59,7 +60,7 @@ public class RemoveDuplicates {
 		llist.removeDuplicates();
 
 		System.out.println(
-			"List after removal of elements");
+				"List after removal of elements");
 		llist.printList();
 	}
 }

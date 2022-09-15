@@ -1,42 +1,39 @@
 package SearchNode;
 
 public class IteratSearch {
-    public static class Node{
+    public static class Node {
         int data;
         Node next;
 
-        public Node(int k){
+        public Node(int k) {
             data = k;
             next = null;
         }
     }
+
     public static void main(String[] args) {
         Node head = new Node(20);
-        Node first = new Node(25);
-        Node second = new Node(30);
-        Node third = new Node(35);
-        Node four = new Node(40);
-
-        head.next = first;
-        first.next = second;
-        second.next = third;
-        third.next = four;
-
-        System.out.println(head.data+"->" + first.data+"->" + second.data+"->" +
-                        third.data+"->" + four.data);
-        System.out.println();
-
+        head.next = new Node(22);
+        head.next.next = new Node(25);
+        head.next.next.next = new Node(30);
+        head.next.next.next.next = new Node(32);
+        head.next.next.next.next.next = new Node(35);
+        head.next.next.next.next.next.next = new Node(40);
+        head.next.next.next.next.next.next.next = new Node(45);
         printlist(head);
+
+        // The element we are looking for
+        System.out.println("Position of element in linked list: " + search(head, 35));
     }
 
-    public static int search(Node head, int target){
+    // Searching for the element in linked list
+    public static int search(Node head, int target) {
         int pos = 1;
         Node curr = head;
-        while(curr != null){
-            if(curr.data == target){
+        while (curr != null) {
+            if (curr.data == target) {
                 return pos;
-            }
-            else{
+            } else {
                 pos++;
                 curr = curr.next;
             }
@@ -44,10 +41,11 @@ public class IteratSearch {
         return -1;
     }
 
-    public static void printlist(Node head){
+    // Printing out all the element in the linked list
+    public static void printlist(Node head) {
         Node curr = head;
-        while(curr != null){
-            System.out.println(curr.data+" ");
+        while (curr != null) {
+            System.out.print(curr.data + "->");
             curr = curr.next;
         }
         System.out.println();
