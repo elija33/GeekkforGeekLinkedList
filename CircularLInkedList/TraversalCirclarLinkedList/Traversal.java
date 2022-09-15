@@ -22,15 +22,6 @@ public class Traversal {
         head.next.next.next.next.next = new Node(30);
         head.next.next.next.next.next.next = new Node(35);
         head.next.next.next.next.next.next.next = head;
-
-        /*
-         * System.out.println(head.data + "->" + head.next.data + "->" +
-         * head.next.next.data + "->"
-         * + head.next.next.next.data + "->" +
-         * head.next.next.next.next.data + "->" + head.next.next.next.next.next.data +
-         * "->"
-         * + head.next.next.next.next.next.next.data);
-         */
         printlist(head);
     }
 
